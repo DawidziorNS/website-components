@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+
+.btn {
+	position: relative;
+	padding: 1em 2em;
+	color: #fff;
+	background-color: royalblue;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.circle {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+	to {
+		transform: translate(-50%, -50%) scale(2);
+		opacity: 0;
+	}
+}
